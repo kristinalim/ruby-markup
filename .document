@@ -3,3 +3,6 @@ bin/*
 - 
 features/**/*.feature
 LICENSE.txt
+VERSION
+TODO.rdoc
+README.rdoc

@@ -1,19 +1,50 @@
 = markup
 
-Description goes here.
+This gem provides a simple, centralized interface for translation of markup from one format to another. It comes with a bunch of processors, and handles requirement of optional dependencies as configured needed.
 
-== Contributing to markup
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+== Configuration
+
+There are several defaults that can set for the library:
+
+*from*:: 
+  Default format from which to translate the source.
+  Default::          +:plain_text+
+  Possible Values::  +:plain_text+, +:html+
+*to*::
+  Default format to which to translate the source.
+  Default::          +:html+
+  Possible Values::  +:plain_text+, +:html+
+*prefix*::
+  Default string to prepend to the name of the source field to come up with the
+  name of the target field. This can be used in conjunction with the +:suffix+
+  option, but is disregarded if the +:target+ option is used. Use +false+ to
+  disable.
+  Default::          +false+
+  Possible Values::  <tt>"_rendered"</tt>, <tt>"_html"</tt>, +false+
+*suffix*::
+  Default string to append to the name of the source field to come up with the
+  name of the target field. This can be used in conjunction with the +:prefix+
+  option, but is disregarded if the +:target+ option is used. Use +false+ to
+  disable.
+  Default::          <tt>"_rendered"</tt>
+  Possible Values::  <tt>"_rendered"</tt>, <tt>"_html"</tt>, +false+
+
+The configuration block can be added to your initialization scripts. For Rails applications, this can be added to an initializer.
+
+  Markup.configuration do |config|
+    config.from :plain_text
+    config.to :html
+  end
+
+== Usage
+
+  Markup.translate(text)
+  Markup.translate(text, :from => :markdown, :to => :html)
+
+=== Rails Support
+
+Support for Rails in available in the markup-rails gem.
 
 == Copyright
 
-Copyright (c) 2011 Kristina Lim. See LICENSE.txt for
-further details.
-
+Copyright (c) 2011 Kristina Lim. Licensed under the {MIT License}[http://www.opensource.org/licenses/mit-license.php]. See LICENSE.txt for further details.

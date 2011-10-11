@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "markup"
-  gem.homepage = "http://github.com/kristinalim/markup"
+  gem.homepage = "http://github.com/kristinalim/ruby-markup"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A centralized interface for translation of markup from one format to another}
+  gem.description = %Q{This gem provides a simple, centralized interface for translation of markup from one format to another. It comes with a bunch of processors, and handles requirement of optional dependencies as configured needed.}
   gem.email = "thenonymous@gmail.com"
   gem.authors = ["Kristina Lim"]
   # dependencies defined in Gemfile
@@ -44,6 +44,7 @@ Rake::RDocTask.new do |rdoc|
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "markup #{version}"
-  rdoc.rdoc_files.include('README*')
+  rdoc.main = 'README.rdoc'
+  rdoc.rdoc_files.include('LICENSE.txt', 'README.txt', 'VERSION')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

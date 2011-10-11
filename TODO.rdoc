@@ -1,0 +1,5 @@
+* Processors should be included only when they have been registered.
+* Allow selection of processors to register. Currently, all processors are registered.
+* Add processors for translation from plain text to HTML.
+* Add processors for translation from Textile to HTML.
+* Add example of creating custom processor to README.
