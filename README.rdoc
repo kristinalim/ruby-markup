@@ -8,26 +8,34 @@ There are several defaults that can set for the library:
 
 *from*:: 
   Default format from which to translate the source.
-  Default::          +:plain_text+
-  Possible Values::  +:plain_text+, +:html+
+  
+  <b>Default</b>: +:plain_text+
+  
+  <b>Possible Values</b>: +:plain_text+, +:html+
 *to*::
   Default format to which to translate the source.
-  Default::          +:html+
-  Possible Values::  +:plain_text+, +:html+
+  
+  <b>Default</b>: +:html+
+  
+  <b>Possible Values</b>: +:plain_text+, +:html+
 *prefix*::
   Default string to prepend to the name of the source field to come up with the
   name of the target field. This can be used in conjunction with the +:suffix+
   option, but is disregarded if the +:target+ option is used. Use +false+ to
   disable.
-  Default::          +false+
-  Possible Values::  <tt>"_rendered"</tt>, <tt>"_html"</tt>, +false+
+  
+  <b>Default</b>: +false+
+  
+  <b>Possible Values</b>: <tt>"_rendered"</tt>, <tt>"_html"</tt>, +false+
 *suffix*::
   Default string to append to the name of the source field to come up with the
   name of the target field. This can be used in conjunction with the +:prefix+
   option, but is disregarded if the +:target+ option is used. Use +false+ to
   disable.
-  Default::          <tt>"_rendered"</tt>
-  Possible Values::  <tt>"_rendered"</tt>, <tt>"_html"</tt>, +false+
+  
+  <b>Default</b>: <tt>"_rendered"</tt>
+  
+  <b>Possible Values</b>: <tt>"_rendered"</tt>, <tt>"_html"</tt>, +false+
 
 The configuration block can be added to your initialization scripts. For Rails applications, this can be added to an initializer.
 
